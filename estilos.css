@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Libre+Baskerville:wght@400&display=swap');
+
+
+/* var*/
+
+:root {
+    --fondo: #211b19;
+    --crema: #e9e2d4;
+    --dorado: #9c8060;
+    --dorado-suave: rgba(156,128,96,.28);
+}
+
+
+@font-face {
+	
+	font-family: "Morrison Regular";
+	src:  url("/home/morena/Desktop/salamone/font/Morrison-Regular.otf") format('opentype');
+}
+
+
+
+/* reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url("/home/morena/Downloads/cieloDeco.png");
+    background-repeat: no-repeat;
+    backgorund-position : center center;
+    background-size: cover;
+    color: var(--crema);
+}
+
+
+
+
+/* hero*/
+
+.hero {
+    position: relative;
+
+    width: calc(100% - 40px);
+    min-height: 100vh;
+
+    margin: 0 20px;
+
+    overflow: hidden;
+
+   
+}
+
+
+
+
+
+/*nav*/
+
+.nav {
+    position: relative;
+
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 70px;
+
+    z-index: 30;
+}
+
+
+.nav a {
+	font-weight: bold;
+
+    position: relative;
+
+    color: var(--crema);
+
+    text-decoration: none;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 17px;
+
+    letter-spacing: 4px;
+
+    transition: .3s ease;
+}
+
+
+.nav a::before,
+.nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 30px;
+    height: 1px;
+
+    background: var(--dorado);
+}
+
+
+.nav a::before {
+    right: calc(100% + 22px);
+}
+
+.nav a::after {
+    left: calc(100% + 22px);
+}
+
+
+.nav a:hover {
+    color: white;
+}
+
+
+/*hero css*/
+
+.content {
+
+    position: relative;
+
+    z-index: 20;
+
+    width: 55%;
+
+    padding-left: 6vw;
+
+    padding-top: 90px;
+}
+
+
+/* salamone*/
+
+.author {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    margin-bottom: 18px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 16px;
+
+    letter-spacing: 6px;
+}
+
+.author::before,
+.author::after {
+
+    content: "";
+
+    width: 65px;
+
+    height: 1px;
+
+    background: var(--dorado);
+}
+
+
+/*titulo*/
+
+.title {
+
+    font-family: "Morrison Regular";
+
+    font-size: clamp(80px, 10vw, 170px);
+
+    font-weight: 400;
+
+    letter-spacing: -6px;
+
+    line-height: .85;
+
+    color: var(--crema);
+
+    white-space: nowrap;
+}
+
+
+/* detalle central del título */
+
+.title::first-letter {
+    letter-spacing: -8px;
+}
+
+
+/* subtitulo */
+
+.subtitle {
+
+    margin-top: 30px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(22px, 2.4vw, 36px);
+
+    letter-spacing: 7px;
+
+    white-space: nowrap;
+}
+
+
+/* lineas divisoras*/
+
+.divider {
+
+    position: relative;
+
+    width: 520px;
+    max-width: 90%;
+
+    height: 1px;
+
+    margin: 34px 0;
+
+    background: var(--dorado);
+}
+
+
+.divider::after {
+
+    content: "◇";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    padding: 0 12px;
+
+    background: #070721;
+
+    color: var(--crema);
+
+    font-size: 24px;
+}
+
+
+/* descripcion*/
+
+.description {
+
+    max-width: 570px;
+
+    font-family: "Libre Baskerville", serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #ded6c8;
+}
+
+
+/*boton de explorar*/
+
+
+.redes img{
+	position: relative;
+	left:130px;
+	top: 150px;
+	width: 50px;
+	margin-right: 15px;
+	cursor: pointer;
+	
+	
+	 
+
+    
+
+    transition: .3s ease;
+	
+	
+}
+
+
+
+
+.explore {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    margin-top: 60px;
+
+    padding: 15px 28px;
+
+    border: 1px solid var(--crema);
+
+    color: var(--crema);
+
+    text-decoration: none;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 14px;
+    
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    transition: .3s ease;
+}
+
+
+.explore .arrow {
+
+    font-size: 24px;
+
+    transition: .3s ease;
+}
+
+
+.explore:hover {
+
+    background: var(--crema);
+
+    color: #0B0B24;
+}
+
+
+.explore:hover .arrow {
+
+    transform: translateX(8px);
+}
+
+
+/* escultura*/
+
+.statue {
+    position: absolute;
+    
+    padding-top: 20px;
+
+    z-index: 15;
+
+    right: 4%;
+
+    bottom: 0;
+
+    width: 1700px;
+
+    max-width: 720px;
+
+    height: 100vh;
+    
+
+    object-fit: contain;
+
+    object-position: bottom center;
+         
+    filter:
+        drop-shadow(-25px 15px 30px rgba(0,0,0,.5));
+}
+.statue{
+	transition: filter 1s ease, transform 1s ease;
+}
+.statue:hover{
+	/*filter:grayscale(50%);*/
+	transform:scale(1.065);
+}
+
+
+/* elimina el scroll bar*/
+
+.scroll {
+
+    position: absolute;
+
+    z-index: 30;
+
+    left: 6vw;
+
+    bottom: 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+
+
+
+
+
+/*responsive*/
+
+@media (max-width: 1100px) {
+
+    .content {
+        width: 65%;
+    }
+
+    .statue {
+        width: 52vw;
+        right: -2%;
+    }
+
+    .nav {
+        gap: 45px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .hero {
+        width: calc(100% - 20px);
+        margin: 0 10px;
+    }
+
+    .nav {
+        height: 90px;
+        gap: 25px;
+    }
+
+    .nav a {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .nav a::before,
+    .nav a::after {
+        display: none;
+    }
+
+    .content {
+
+        width: 100%;
+
+        padding:
+            80px
+            30px
+            400px;
+    }
+
+    .title {
+        font-size: 17vw;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        letter-spacing: 4px;
+    }
+
+    .description {
+        font-size: 15px;
+        max-width: 500px;
+    }
+
+    .statue {
+
+        width: 85vw;
+
+        height: 65vh;
+
+        right: -12%;
+
+        opacity: .7;
+    }
+
+    .scroll {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .frame {
+        inset: 10px;
+    }
+
+    .corner {
+        display: none;
+    }
+
+    .nav {
+        justify-content: space-around;
+        gap: 5px;
+    }
+
+    .nav a {
+        font-size: 9px;
+    }
+
+    .content {
+        padding-top: 50px;
+    }
+
+    .author {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .author::before,
+    .author::after {
+        width: 25px;
+    }
+
+    .title {
+        font-size: 18vw;
+        letter-spacing: -2px;
+    }
+
+    .subtitle {
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .statue {
+        width: 105vw;
+        right: -25%;
+    }
+
+}
