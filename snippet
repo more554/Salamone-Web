@@ -1,0 +1,17 @@
+<!-- La imagen que va a cambiar -->
+<img id="miImagen" src="imagen-original.jpg" alt="Imagen Original" width="300">
+
+<!-- El botón independiente -->
+<button id="btnCambiar">Cambiar Imagen</button>
+
+<script>
+  // 1. Obtener los elementos del DOM usando sus IDs
+  const imagen = document.getElementById('miImagen');
+  const boton s= document.getElementById('btnCambiar');
+
+  // 2. Escuchar el evento de clic en el botón
+  boton.addEventListener('click', function() {
+    // 3. Cambiar la ruta de la imagen (src) por la nueva
+    imagen.src = 'imagen-nueva.jpg';
+  });
+</script>
